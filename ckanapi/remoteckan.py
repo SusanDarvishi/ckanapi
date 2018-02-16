@@ -24,7 +24,7 @@ class RemoteCKAN(object):
     An interface to the the CKAN API actions on a remote CKAN instance.
 
     :param address: the web address of the CKAN instance, e.g.
-                    'http://demo.ckan.org', stored as self.address
+                    'https://data.boston.gov', stored as self.address
     :param apikey: the API key to pass as an 'X-CKAN-API-Key' header
                     when actions are called, stored as self.apikey
     :param user_agent: the User-agent to report when making requests

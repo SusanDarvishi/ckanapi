@@ -25,7 +25,7 @@ Simple actions with string parameters may be called directly. The
 response is pretty-printed to STDOUT. e.g.:
 
 ```
-$ ckanapi action group_list -r http://demo.ckan.org
+$ ckanapi action group_list -r https://data.boston.gov
 [
   "data-expolorer",
   "example-group",
@@ -200,7 +200,7 @@ Making a request:
 from ckanapi import RemoteCKAN
 ua = 'ckanapiexample/1.0 (+http://example.com/my/website)'
 
-demo = RemoteCKAN('http://demo.ckan.org', user_agent=ua)
+demo = RemoteCKAN('https://data.boston.gov', user_agent=ua)
 groups = demo.action.group_list(id='data-explorer')
 print groups
 ```
@@ -242,7 +242,7 @@ CKAN plugin:
 from ckanapi import RemoteCKAN, NotAuthorized
 ua = 'ckanapiexample/1.0 (+http://example.com/my/website)'
 
-demo = RemoteCKAN('http://demo.ckan.org', apikey='phony-key', user_agent=ua)
+demo = RemoteCKAN('https://data.boston.gov', apikey='phony-key', user_agent=ua)
 try:
     pkg = demo.action.package_create(name='my-dataset', title='not going to work')
 except NotAuthorized:
